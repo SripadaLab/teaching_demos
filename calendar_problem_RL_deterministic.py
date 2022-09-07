@@ -271,7 +271,7 @@ def draw_current_step(ax, fig):
                 ha='center', va='center', fontsize=20, color='k')
         #ax.text(0.5, 0.5, "prediction error =\nR(s') + Q(s', a') - Q(s, a)",
         #        ha='center', va='center', fontsize=15, color='k')
-        rainbow_text(-0.05, 0.55, 
+        rainbow_text(-0.1, 0.55, 
                 ls=["prediction error", " = ", "R(s')", " + ", "Q(s', a')", " - ", "Q(s, a)"],
                 lc=['C0', 'k', 'red', 'k', current_state_color, 'k', previous_state_color],
                 ha='left', va='center', fontsize=15, ax=ax, fig=fig, fontweight='bold')
@@ -285,7 +285,7 @@ def draw_current_step(ax, fig):
         
         #ax.text(0.5, 0.2, r"Q(s, a) = Q(s, a) + ($\alpha$ * prediction error)",
         #        ha='center', va='center', fontsize=15, color='k')
-        rainbow_text(-0.05, 0.15, 
+        rainbow_text(-0.1, 0.15, 
                 ls=["Q(s, a)", " = ", "Q(s, a)", " + (", r"$\alpha$", " * ", "prediction error", ")"],
                 lc=[previous_state_color, 'k', previous_state_color, 'k', 'C0', 'k', 'C0', 'k'],
                 ha='left', va='center', fontsize=15, ax=ax, fig=fig, fontweight='bold')
