@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.gridspec import GridSpec
-from matplotlib import transforms
+from matplotlib import transforms, animation
 from IPython.display import HTML
 from IPython.display import clear_output
 
