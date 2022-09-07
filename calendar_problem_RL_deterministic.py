@@ -3,6 +3,8 @@ from matplotlib import pyplot as plt
 from matplotlib.gridspec import GridSpec
 from matplotlib import transforms
 from IPython.display import HTML
+from IPython.display import clear_output
+
 
 def rainbow_text(x, y, ls, lc, ax, fig,**kw):
     t = ax.transData
