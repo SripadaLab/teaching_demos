@@ -231,7 +231,7 @@ def draw_current_step(ax, fig):
                 fontsize=20, color=current_state_color)
         
         if previous_state_action is not None:
-            ax.text(0.5, 0.25, f"previous state-action\n Q(s', a') = " + f'{state_q_values[previous_state_action[0]][previous_state_action[1]]}', 
+            ax.text(0.5, 0.25, f"previous state-action\n Q(s, a) = " + f'{state_q_values[previous_state_action[0]][previous_state_action[1]]}', 
                     ha='center', va='center', 
                     fontsize=20, color=previous_state_color)
         else:
