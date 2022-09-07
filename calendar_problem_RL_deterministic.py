@@ -1,11 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.gridspec import GridSpec
-from matplotlib.animation import FuncAnimation
-import time
-from IPython.display import clear_output
-from matplotlib import transforms, animation
-import imageio
+from matplotlib import transforms
 from IPython.display import HTML
 
 def rainbow_text(x, y, ls, lc, ax, fig,**kw):
@@ -16,9 +12,8 @@ def rainbow_text(x, y, ls, lc, ax, fig,**kw):
         ex = text.get_window_extent()
         t = transforms.offset_copy(text._transform, x=ex.width, units='dots')
 		
-		
-		
 global state_locations, actions, state_rewards, state_q_values, state_actions, current_algorithm_step, previous_state_action, current_state_action, is_first_iteration, alpha, new_previous_q_val_memory, current_state_color, previous_state_color
+
 def reset():
     global state_locations, actions, state_rewards, state_q_values, state_actions, current_algorithm_step, previous_state_action, current_state_action, is_first_iteration, alpha, new_previous_q_val_memory, current_state_color, previous_state_color
     state_q_values = {0: [0.1, 0],
