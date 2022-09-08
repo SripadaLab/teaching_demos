@@ -4,7 +4,7 @@ from matplotlib.gridspec import GridSpec
 from matplotlib.animation import FuncAnimation
 import time
 from IPython.display import clear_output
-from matplotlib import transforms, animation
+from matplotlib import transforms, animation, lines
 import imageio
 from IPython.display import HTML
 
