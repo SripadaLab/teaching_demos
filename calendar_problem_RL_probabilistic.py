@@ -58,7 +58,7 @@ def reset():
                      7: -3,
                      8: -4}
     current_algorithm_step = -1
-    random_action_choice = softmax_sample([0, 0]) #softmax_sample(state_q_values[0])
+    random_action_choice = softmax_sample(state_q_values[0])  # softmax_sample([0, 0])
     current_state_action = [0, random_action_choice[0]]
     previous_state_action = None
     previous_state_color = 'C5'
@@ -206,7 +206,7 @@ def draw_current_step(ax, fig):
             current_step_text = "begin at\nthe start state"
         else:
             current_step_text = 'restart at the\nstart state because\ntermimal state\nreached and set the\n"previous state-action"\nto None'
-            random_action_choice = softmax_sample([0, 0]) #softmax_sample(state_q_values[0])
+            random_action_choice = softmax_sample(state_q_values[0])  #softmax_sample([0, 0])
             current_state_action = [0, random_action_choice[0]]
             previous_state_action = None
             is_first_iteration = True
@@ -365,13 +365,13 @@ def update_algorithm():
         if previous_state_action is None:
             previous_state_action = current_state_action
             current_state = state_actions[previous_state_action[0]][previous_state_action[1]]
-            random_action_choice = softmax_sample([0, 0]) #softmax_sample(state_q_values[current_state])
+            random_action_choice = softmax_sample(state_q_values[current_state])  #softmax_sample([0, 0])
             current_action = random_action_choice[0]  #np.argmax(state_q_values[current_state])
             current_state_action = [current_state, current_action]
         elif current_state_action[0] in state_actions:
             previous_state_action = current_state_action
             current_state = state_actions[previous_state_action[0]][previous_state_action[1]]
-            random_action_choice = softmax_sample([0, 0]) #softmax_sample(state_q_values[current_state])
+            random_action_choice = softmax_sample(state_q_values[current_state])  # softmax_sample([0, 0])
             current_action = random_action_choice[0]  #np.argmax(state_q_values[current_state])
             current_state_action = [current_state, current_action]
         else:
