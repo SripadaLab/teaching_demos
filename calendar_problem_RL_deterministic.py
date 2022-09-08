@@ -202,22 +202,22 @@ def draw_current_step(ax, fig):
         
     if current_step == "action selection rule":
         
-        if not is_first_iteration:
-            ax.text(0.5, 0.75, "action selection rule", fontsize=20, color='k', va='center', ha='center')
+        #if not is_first_iteration:
+        #    ax.text(0.5, 0.75, "action selection rule", fontsize=20, color='k', va='center', ha='center')
+        #
+        #    current_step_text = 'choose action in the\ncurrent state with\nmaximal Q value'
+        #    ax.text(0.5, 0.45, current_step_text, ha='center', va='center', 
+        #            fontsize=20, color='k')
+        #    current_step_text = '(if no valid actions,\n go back to start state)'
+        #    ax.text(0.5, 0.1, current_step_text, ha='center', va='center', 
+        #            fontsize=15, color='k')
+        #    ax.set_title('Next Step:', fontsize=20, y=0.9)
+        #else:
+        ax.text(0.5, 0.65, "action selection rule", fontsize=20, color='k', va='center', ha='center')
 
-            current_step_text = 'choose action in the\ncurrent state with\nmaximal Q value'
-            ax.text(0.5, 0.45, current_step_text, ha='center', va='center', 
-                    fontsize=20, color='k')
-            current_step_text = '(if no valid actions,\n go back to start state)'
-            ax.text(0.5, 0.1, current_step_text, ha='center', va='center', 
-                    fontsize=15, color='k')
-            ax.set_title('Next Step:', fontsize=20, y=0.9)
-        else:
-            ax.text(0.5, 0.65, "action selection rule", fontsize=20, color='k', va='center', ha='center')
-
-            current_step_text = 'choose action in the\ncurrent state with\nmaximal Q value'
-            ax.text(0.5, 0.35, current_step_text, ha='center', va='center', 
-                    fontsize=20, color='k')
+        current_step_text = 'choose action in the\ncurrent state with\nmaximal Q value'
+        ax.text(0.5, 0.35, current_step_text, ha='center', va='center', 
+                fontsize=20, color='k')
 
         
     if current_step == "take action from previous state":
@@ -245,9 +245,9 @@ def draw_current_step(ax, fig):
         if is_first_iteration:
             current_step_text = 'since presently no\n"previous state-action" exists,\nskip Q-value update step'
             ax.text(0.5, 0.75, current_step_text, ha='center', va='center', 
-                    fontsize=15, color='k')
+                    fontsize=20, color='k')
             ax.text(0.5, 0.25, 'follow maximal Q value action\nfrom current state to\nget the next "current state",\nand set the next\n"previous state-action"\nto current state-action', ha='center', va='center', 
-                    fontsize=15, color='k')
+                    fontsize=20, color='k')
             is_first_iteration = False
             ax.set_title('Next Step:', fontsize=20, y=1)
         else:
