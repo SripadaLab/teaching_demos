@@ -117,7 +117,7 @@ def animateDV(t_local):
                 dvLine.set_color('r')
             boundaryCrossed = True
             answer_counts = (answer_counts[0], answer_counts[1] + 1, answer_counts[2])
-            ax.set_title(f'Coin Selected: {activeCoin}\nDecision Counts: Fair={answer_counts[0]}  Trick={answer_counts[1]}  Need More Data={answer_counts[2]}',
+            ax.set_title(f'Decision Target: {activeCoin}\nDecision Counts: Fair={answer_counts[0]}  Trick={answer_counts[1]}  Need More Data={answer_counts[2]}',
                         fontsize=20)
             t += 1
             pause_count += 1
@@ -130,13 +130,13 @@ def animateDV(t_local):
                 dvLine.set_color('r')
             boundaryCrossed = True
             answer_counts = (answer_counts[0] + 1, answer_counts[1], answer_counts[2])
-            ax.set_title(f'Coin Selected: {activeCoin}\nDecision Counts: Fair={answer_counts[0]}  Trick={answer_counts[1]}  Need More Data={answer_counts[2]}',
+            ax.set_title(f'Decision Target: {activeCoin}\nDecision Counts: Fair={answer_counts[0]}  Trick={answer_counts[1]}  Need More Data={answer_counts[2]}',
                         fontsize=20)
             t += 1
             pause_count += 1
             return ()
             
-    ax.set_title(f'Coin Selected: {activeCoin}\nDecision Counts: Fair={answer_counts[0]}  Trick={answer_counts[1]}  Need More Data={answer_counts[2]}',
+    ax.set_title(f'Decision Target: {activeCoin}\nDecision Counts: Fair={answer_counts[0]}  Trick={answer_counts[1]}  Need More Data={answer_counts[2]}',
                  fontsize=20)
     t += 1
     return ()
