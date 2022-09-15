@@ -193,9 +193,6 @@ def run_simulation():
         p_heads_trick_coin = float(input('\nEnter the probability of flipping heads with the tricky coin.\nThis is the drift rate - a value far from 0.5 yields a high drift rate.\nThis probability must be between 0 and 1.\n   Your input: ')) 
         p_tails_trick_coin = 1-p_heads_trick_coin
 
-    def chooseCoin():
-        return "Trick"
-
     n_frames = 2000
     fig, ax = plt.subplots(figsize=(10, 7))
     anim = animation.FuncAnimation(fig, animateDV, init_func=initChoice,
