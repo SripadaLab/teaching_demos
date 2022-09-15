@@ -10,10 +10,6 @@ from base64 import b64encode
 
 matplotlib.rcParams['animation.embed_limit'] = 2**256
 
-def chooseCoin():
-    rule = np.random.choice(["Trick","Fair"], p=[0.5, 0.5])
-    return rule
-
 
 def flipCoin(coin):
     if coin=="Trick":
