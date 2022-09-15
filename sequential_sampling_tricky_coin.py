@@ -21,7 +21,7 @@ def flipCoin(coin):
 
 
 def initChoice():
-    global startDV, DVhistory, thresholdLow,thresholdHigh, correctBoundary, ax
+    global startDV, DVhistory, thresholdLow,thresholdHigh, correctBoundary, ax, chooseCoin
     global boundaryCrossed
     global activeCoin, likelihoodsEven, likelihoodsOdd
     global threshHighLine, threshLowLine,dvLine, threshCorrectLine, threshIncorrectLine
