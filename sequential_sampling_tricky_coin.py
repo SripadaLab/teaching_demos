@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation, rc
 from IPython.display import HTML
+from IPython.display import clear_output
 import matplotlib
 from tqdm.notebook import tqdm
 import sys
@@ -160,6 +161,7 @@ def init_lines():
     
     
 def run_simulation():
+    clear_output(wait=True)
     global simulation_length, thresholdHigh, thresholdLow, p_heads_trick_coin, p_heads_trick_coin, ax, dvLine
     global n_frames, p_tails_trick_coin
     simulation_length = 200
